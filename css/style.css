@@ -131,6 +131,11 @@ body.modal-open {
 	margin-right: 23px;
 }
 
+.upper-navigation-menu a span:hover {
+	text-decoration: none;
+}
+
+
 
 .col-xs-2:last-child .navigation-element-link:before {
 	display: none;
@@ -188,20 +193,28 @@ body.modal-open {
 }
 
 .phone-number-container {
-	color: #ff9600;
+	color: #ee1927;
 	font-family: 'GothamPro';
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 19px;
+	font-weight: 700;
 	font-style: normal;
-	padding-top: 22px;
+	padding-top: 20px;
 	float: left;
-	margin-left: 10px;
+	margin-left: -23px;
 }
 
 .cart-sum-container {
 	float: left;
-	padding-top: 13px;
-	margin-left: 36px;
+	padding-top: 11px;
+	padding-left: 27px;
+	cursor: pointer;
+	position: relative;
+	display: table;
+	color: #ee1927;
+}
+
+.cart-sum-container:hover .cart-hidden {
+	display: block;
 }
 
 .cart-sum-container img {
@@ -209,14 +222,17 @@ body.modal-open {
 }
 
 .cart-sum {
-	float: left;
 	color: #ee1927;
 	font-family: 'GothamPro';
 	font-weight: 600;
 	font-style: normal;
-	text-transform: uppercase;
-	line-height: 40px;
+	width: 60px;
 	margin-left: 8px;
+	vertical-align: middle;
+	display: table-cell;
+	height: 42px;
+	padding-left: 5px;
+	line-height: 15px;
 }
 
 .navigation-element-container {
@@ -411,7 +427,7 @@ h2 {
 	color: #585858;
 	font-size: 13px;
 	font-family: 'GothamPro';
-	font-weight: 600;
+	font-weight: 500;
 	font-style:normal;
 }
 
@@ -466,7 +482,7 @@ h3 {
 }
 
 .sucess-list {
-	font-weight: 600;
+	font-weight: 500;
 	color: #585858;
 	font-family: 'GothamPro';
 	font-style: normal;
@@ -514,7 +530,7 @@ h3 {
 	float: left;
 	width: 540px;
 	color: #585858;
-	font-weight: 600;
+	font-weight: 500;
 	font-family: 'GothamPro';
 	font-size: 13px;
 	font-style: normal;
@@ -724,6 +740,7 @@ h3 {
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
+	margin-top: -15px;
 }
 .footer-bottom-part-container {
 	padding-bottom: 20px;
@@ -734,7 +751,7 @@ h3 {
 }
 
 .header-container {
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-bottom: 30px;
 }
 
@@ -762,7 +779,7 @@ h3 {
 
 .promotion-description {
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 600;
 	font-style: normal;
 	font-family: 'GothamPro';
@@ -905,6 +922,10 @@ h3 {
 	cursor: pointer;
 }
 
+.renaissance div {
+	margin-bottom: 5px;
+}
+
 .renaissance a {
 	text-decoration: none;
 }
@@ -976,13 +997,16 @@ h3 {
 	font-size: 14px;
 	font-weight: normal;
 	font-style: italic;
-	width: 95px;
+	width: 60px;
 	float: left;
 	clear: both;
+	padding-top: 4px;
+	line-height: 16px;
 }
 
 .size {
 	float: right;
+	max-width: 135px;
 }
 
 .amount {
@@ -1224,13 +1248,13 @@ h3 {
 .jq-selectbox__select-text {
 	color: #232323;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 14px;
 	height: 37px;
 	font-family: 'GothamPro';
 	width: 78px;
-	overflow: visible;
-	margin-left: 10px;
 	line-height: 37px;
+/*	width: auto !important;*/
+	text-overflow: clip;
 }
 
 .jq-selectbox__trigger-arrow {
@@ -1361,7 +1385,7 @@ span.red {
 }
 
 .final-order-button {
-	width: 160px;
+	width: 180px;
 	background-color: #ee1927;
 	text-align: center;
 	border-radius: 30px;
@@ -1424,46 +1448,54 @@ span.red {
 	width: 42px;
 }
 
-.page-navigation-container a:hover {
-	text-decoration: none;
-}
-
 .page-navigation-current {
 	font-family: 'Times New Roman';
 	font-size: 18px;
 	font-weight: normal;
 	font-style: italic;
-	color: #232323;
+	color: #ffffff;
 	text-decoration: none;
 	width: 42px;
+	height: 42px;
 	border-radius: 50%;
-	border: 2px solid #ee1927;
+	background-color: #ee1927;
 	display: inline-block;
 	line-height: 37px;
 	cursor: pointer;
 	vertical-align: middle;
+	padding-top: 3px;
 }
 
 .page-navigation-prev {
 	text-decoration: none;
-	background: url(images/prev0button.png) center no-repeat;
+	background: url(../images/prev-gray.png) center no-repeat;
 	width: 42px;
 	height: 42px;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
   margin-left: -10px;
+	transition: background 0.4s ease;
 }
 
 .page-navigation-next {
 	text-decoration: none;
-	background: url(images/next-button.png) center no-repeat;
+	background: url(../images/next-gray.png) center no-repeat;
 	width: 42px;
 	height: 42px;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: -10px;
   margin-left: 10px;
+	transition: background 0.4s ease;
+}
+
+.page-navigation-prev:hover {
+	background: url(../images/hover-yellow-left.png) center no-repeat;
+}
+
+.page-navigation-next:hover {
+	background: url(../images/hover-yellow-right.png) center no-repeat;
 }
 
 .bottom-text-container {
@@ -1477,7 +1509,7 @@ span.red {
 
 .bottom-text-container p {
 	font-family: 'GothamPro';
-	font-weight: 600;
+	font-weight: 500;
 	color: #585858;
 	font-size: 13px;
 	font-style: normal;
@@ -1490,6 +1522,7 @@ span.red {
 	font-size: 13px;
 	font-style: normal;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .read-next:hover {
@@ -1685,7 +1718,7 @@ h4 {
 
 .inner-item-components-menu li {
 	list-style-image: url(images/yellow-point-inner.png);
-	padding-bottom: 11px;
+	padding-bottom: 6px;
 }
 
 .inner-size {
@@ -1767,6 +1800,7 @@ h4 {
 	font-size: 30px;
 	font-weight: 400;
 	color: #ef1927;
+	margin-bottom: -12px;
 }
 
 .gray-secret-description-classic-header {
@@ -1892,6 +1926,7 @@ h4 {
   position: absolute;
   z-index: 10;
   right: 57px;
+	top: 8px
 }
 
 .carousel-info-header:after {
@@ -1904,6 +1939,7 @@ h4 {
   position: absolute;
   z-index: 10;
   left: 57px;
+	top: 8px
 }
 
 .carousel-control {
@@ -2019,6 +2055,8 @@ a.promotion-learn-more-button:hover {
 	text-align: center;
 	display: inline-block;
 	vertical-align: bottom;
+	float: left;
+	margin-right: 20px;
 }
 
 .promotion-line-container {
@@ -2164,11 +2202,12 @@ a.promotion-learn-more-button:hover {
 }
 
 .write-to-us-form-header-part-1 {
-	font-family: OlgaCTT;
+	font-family: 'Kobzar KS';
 	font-size: 30px;
-	font-weight: 400;
-	font-style: normal;
 	color: #ffc600;
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: -13px;
 }
 
 .write-to-us-form-header-part-2 {
@@ -2301,10 +2340,12 @@ input:focus {
 }
 
 .modal-head {
-	font-weight: 400;
+	font-family: 'Kobzar KS';
 	font-size: 30px;
-	font-family: OlgaCTT;
-	color: #ffc000;
+	color: #ffc600;
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: -17px;
 }
 
 .form-group input {
@@ -2470,3 +2511,131 @@ button:hover
 	right: 0px;
 }
 
+.upper-navigation-menu a:hover {
+	text-decoration: none;
+}
+
+.hidden-bottom-text-container {
+	display: none;
+}
+
+
+.promo-add {
+	overflow: hidden;
+	float: none;
+}
+
+a.promotion-container:hover {
+	text-decoration: none;
+}
+
+.bottom-cart {
+	float: none;
+	margin-top: 10px;
+}
+
+.submition-close {
+	text-transform: uppercase;
+	font-family: 'GothamPro';
+	color: #100f0f;
+	font-size: 40px;
+	font-weight: normal;
+	font-style: normal;
+	cursor: pointer;
+	color: #ffc600;
+}
+
+.emp {
+	font-size: 50px;
+}
+
+.cart-hidden {
+	background-color: #ffffff;
+	z-index: 100;
+	position: absolute;
+	top: 45px;
+	top: 48px;
+	right: -22px;
+	display: none;
+	margin-top: 5px;
+	padding-top: 12px;
+}
+
+.cart-hidden .red-part {
+	top: -13px;
+}
+
+.cart-hidden .cart {
+	position: relative;
+}
+
+.red-part {
+	width: 20px;
+	height: 20px;
+	border-top: 4px solid #ee1927;
+	border-left: 4px solid #ee1927;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -9px;
+	left: 108px;
+	background-color: ffffff;
+}
+
+.hidden-form-text {
+	font-family: 'GothamPro';
+	color: #100f0f;
+	font-size: 40px;
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.hidden-form-holder {
+	text-align: center;
+  display: none;
+	background: url(../images/hidden-background.png) bottom no-repeat;
+	height: 480px;
+	margin-bottom: -33px;
+}
+
+.ok {
+	display: inline-block;
+	width: 53px;
+	cursor: pointer;
+	margin-top: 25px;
+}
+
+.submition-cont {
+	font-size: 18px;
+	font-weight: 600;
+	font-family: 'GothamPro';
+	color: #ffffff;
+	text-align: center;
+	background-color: #ffba00;
+	border: none;
+	border-radius: 30px;
+	line-height: 50px;
+	width: 201px;
+	text-transform: uppercase;
+}
+
+
+.jq-selectbox ul {
+	font-family: 'GothamPro';
+	font-size: 12px;
+}
+
+.hidden-modal-sub-text {
+	color: #646464;
+	font-size: 16px;
+	font-family: Georgia;
+	font-style: italic;
+	font-weight: normal;
+	width: 299px;
+	margin: 0 auto;
+}
+
+.modal-title.thank {
+	margin-left: -5px;
+	margin-right: -5px;
+}

@@ -30,7 +30,10 @@ $(document).ready(function() {
 	/*SLIDER*/
 	
 	/*SELECTS*/
-	$('select').styler();
+	$('select').styler({
+		selectSmartPositioning: true,
+	});
+	
 	/*SELECTS*/
 	
 	$(".sort-by-type").on("click",function() {
@@ -106,10 +109,14 @@ $(document).ready(function() {
 	/*MASK*/
 	jQuery(function($) {
 		$("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
-		$(".phone").mask("(9 9 9) 9 9 9-9 9 9 9");
+		$(".phone").mask("+ 7 (9 9 9) 9 9 9-9 9 9 9");
 		$("#tin").mask("99-9999999");
 		$("#ssn").mask("999-99-9999");
 	});
+	
+//	$(".cart-sum-container").on("mouseover",function() {
+//		$(".cart-hidden").fadeIn(250);
+//	});
 	
 	// Формы
 	
@@ -147,6 +154,10 @@ $(document).ready(function() {
 		}
 		
 	});
+	
+	$(".read-next").click(function() {
+		$(".hidden-bottom-text-container").fadeToggle(400);
+	})
 	
 	$("body").on("click",function(e) {
 		if (!$(e.target).hasClass("services-option") && !$(e.target).hasClass("services-button") && !$(e.target).parents().hasClass("services-option") && !$(e.target).parents().hasClass("services-button")) {
@@ -274,7 +285,6 @@ function validateForms() {
     
   });
 
-  
 }
 
 jQuery.extend(jQuery.validator.messages, {
@@ -295,4 +305,15 @@ jQuery.extend(jQuery.validator.messages, {
 	range: jQuery.validator.format("Please enter a value between {0} and {1}."),
 	max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
 	min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+});
+
+$(".submition").click(function(event) {
+	event.preventDefault();
+	$(this).parents(".modal-content").find(".order-form-wrapper").hide();
+	$(".hidden-form-holder").fadeIn(250);
+});
+
+$("#orderModal .close-cross").on("click",function() {
+	$(".hidden-form-holder").hide();
+  $(this).parents(".modal-content").find(".order-form-wrapper").fadeIn(250);
 });
