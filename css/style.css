@@ -950,15 +950,19 @@ h3 {
 }
 
 .item-name {
-	color: #232323;
 	font-family: 'GothamPro';
 	font-size: 16px;
 	font-weight: 600;
 	font-style: normal;
-	display: inline-block;
-	border-bottom: 1px solid #afafaf;
+	color: #afafaf;
 	text-transform: uppercase;
 	margin-bottom: 16px;
+	text-decoration: underline;
+	word-break: break-word;
+}
+
+.item-name span {
+	color: #232323
 }
 
 .item-ingredients-container {
@@ -2553,12 +2557,11 @@ a.promotion-container:hover {
 	background-color: #ffffff;
 	z-index: 100;
 	position: absolute;
-	top: 45px;
-	top: 48px;
-	right: -22px;
 	display: none;
 	margin-top: 5px;
 	padding-top: 12px;
+	top: 37px;
+	right: -89px;
 }
 
 .cart-hidden .red-part {
@@ -2635,3 +2638,42 @@ a.promotion-container:hover {
 	margin: 0 auto;
 }
 
+.sum-image-container {
+	position: relative;
+}
+
+.hidden-form-holder .modal-title {
+	width: 526px;
+	margin: 0 auto;
+	line-height: 45px;
+	padding-top: 20px;
+}
+
+.hidden-form-holder .hidden-modal-sub-text {
+	color: red;
+	font-size: 19px;
+	font-family: Georgia;
+	font-style: italic;
+	font-weight: normal;
+	width: 299px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.thank {
+	width: 526px;
+	margin: 0 auto;
+	line-height: 45px;
+	padding-top: 20px;
+}
+
+.thank + .hidden-modal-sub-text {
+	color: red;
+	font-size: 19px;
+	font-family: Georgia;
+	font-style: italic;
+	font-weight: normal;
+	width: 299px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
